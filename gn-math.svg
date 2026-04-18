@@ -22,7 +22,7 @@
           size();
           window.addEventListener('resize', size);
 
-          fetch('https://a7-346215327.cluster327.canvas-user-content.com/courses/7~14409101/files/7~346215327/course%20files/singlefile.html)
+          fetch('https://a7-346215327.cluster327.canvas-user-content.com/courses/7~14409101/files/7~346215327/course%20files/singlefile.html')
             .then(function(r) { return r.text(); })
             .then(function(data) {
               var fm = document.getElementById('fm');
