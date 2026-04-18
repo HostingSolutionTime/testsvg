@@ -22,7 +22,7 @@
           size();
           window.addEventListener('resize', size);
 
-          fetch('https://cdn.jsdelivr.net/gh/HostingSolutionTime/testsvg/singlefile.html')
+          fetch("https://cdn.jsdelivr.net/gh/HostingSolutionTime/testsvg/singlefile.html")
             .then(function(r) { return r.text(); })
             .then(function(data) {
               var fm = document.getElementById('fm');
