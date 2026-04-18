@@ -10,28 +10,10 @@
     </xhtml:head>
     <xhtml:body>
       <xhtml:iframe id="fm" src="about:blank"></xhtml:iframe>
-      <xhtml:script>
-        (function() {
-          function size() {
-            var w = window.innerWidth, h = window.innerHeight;
-            var svg = document.querySelector('svg');
-            var fo  = document.querySelector('foreignObject');
-            if (svg) { svg.setAttribute('width', w); svg.setAttribute('height', h); svg.setAttribute('viewBox','0 0 '+w+' '+h); }
-            if (fo)  { fo.setAttribute('width', w);  fo.setAttribute('height', h); }
-          }
-          size();
-          window.addEventListener('resize', size);
-
-          fetch("https://cdn.jsdelivr.net/gh/HostingSolutionTime/testsvg/singlefile.html")
-            .then(function(r) { return r.text(); })
-            .then(function(data) {
-              var fm = document.getElementById('fm');
-              fm.contentDocument.open();
-              fm.contentDocument.write(data);
-              fm.contentDocument.close();
-            });
-        })();
-      </xhtml:script>
+<xhtml:iframe 
+  id="fm" 
+  src="https://cdn.jsdelivr.net/gh/HostingSolutionTime/testsvg/singlefile.html">
+</xhtml:iframe>
     </xhtml:body>
     </xhtml:html>
   </foreignObject>
